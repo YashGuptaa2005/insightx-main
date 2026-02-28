@@ -1,6 +1,6 @@
 export default function Header({ activeTab, setActiveTab, onClearChat }) {
   return (
-    <header style={{
+    <header className="header-root" style={{
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
@@ -33,7 +33,7 @@ export default function Header({ activeTab, setActiveTab, onClearChat }) {
             color: "var(--text-primary)",
             letterSpacing: "-0.3px"
           }}>InsightX</div>
-          <div style={{
+          <div className="header-logo-subtitle" style={{
             fontSize: "9px",
             color: "var(--text-secondary)",
             letterSpacing: "0.8px",
@@ -59,7 +59,7 @@ export default function Header({ activeTab, setActiveTab, onClearChat }) {
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             style={{
-              padding: "6px 18px",
+              padding: "6px 14px",
               borderRadius: "7px",
               border: "none",
               cursor: "pointer",
@@ -80,41 +80,41 @@ export default function Header({ activeTab, setActiveTab, onClearChat }) {
       </div>
 
       {/* Right side */}
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
 
         {/* Clear chat button */}
         {activeTab === "chat" && (
-  <button
-    onClick={onClearChat}
-    onMouseEnter={e => {
-      e.currentTarget.style.borderColor = "var(--red)"
-      e.currentTarget.style.color = "var(--red)"
-    }}
-    onMouseLeave={e => {
-      e.currentTarget.style.borderColor = "var(--border)"
-      e.currentTarget.style.color = "var(--text-secondary)"
-    }}
-    style={{
-      padding: "5px 12px",
-      borderRadius: "6px",
-      border: "1px solid var(--border)",
-      background: "transparent",
-      color: "var(--text-secondary)",
-      fontSize: "11px",
-      cursor: "pointer",
-      fontFamily: "'JetBrains Mono', monospace",
-      letterSpacing: "0.3px",
-      transition: "all 0.15s ease"
-    }}
-  >
-    Clear chat
-  </button>
-)}
+          <button
+            onClick={onClearChat}
+            onMouseEnter={e => {
+              e.currentTarget.style.borderColor = "var(--red)"
+              e.currentTarget.style.color = "var(--red)"
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.borderColor = "var(--border)"
+              e.currentTarget.style.color = "var(--text-secondary)"
+            }}
+            style={{
+              padding: "5px 10px",
+              borderRadius: "6px",
+              border: "1px solid var(--border)",
+              background: "transparent",
+              color: "var(--text-secondary)",
+              fontSize: "11px",
+              cursor: "pointer",
+              fontFamily: "'JetBrains Mono', monospace",
+              letterSpacing: "0.3px",
+              transition: "all 0.15s ease"
+            }}
+          >
+            Clear
+          </button>
+        )}
 
         {/* Live indicator */}
         <div style={{
           display: "flex", alignItems: "center",
-          gap: "8px", fontSize: "11px",
+          gap: "6px", fontSize: "11px",
           color: "var(--text-secondary)",
           fontFamily: "'JetBrains Mono', monospace"
         }}>
@@ -123,9 +123,10 @@ export default function Header({ activeTab, setActiveTab, onClearChat }) {
             borderRadius: "50%",
             background: "var(--accent)",
             boxShadow: "0 0 6px var(--accent)",
-            animation: "pulse-dot 2s ease infinite"
+            animation: "pulse-dot 2s ease infinite",
+            flexShrink: 0
           }} />
-          250K txns · 2024
+          <span className="header-txn-count">250K txns · 2024</span>
         </div>
 
       </div>

@@ -22,7 +22,7 @@ function StatCard({ title, value, subtitle, icon, accent = false }) {
         }}>{title}</span>
         <span style={{ fontSize: "16px" }}>{icon}</span>
       </div>
-      <div style={{
+      <div className="stat-value" style={{
         fontSize: "26px", fontWeight: "600",
         color: accent ? "var(--accent)" : "var(--text-primary)",
         letterSpacing: "-0.5px", marginBottom: "4px"
@@ -122,9 +122,7 @@ export default function SummaryCards() {
       } finally {
         setLoading(false)
       }
-    console.log("Summary:", s.data)
-    console.log("Failures:", f.data)
-    console.log("Trends:", t.data)}
+    }
     fetchAll()
   }, [])
 
@@ -147,7 +145,7 @@ export default function SummaryCards() {
   const maxBank = Math.max(...Object.values(bankFails), 1)
 
   return (
-    <div style={{
+    <div className="dashboard-outer" style={{
       height: "100%", overflowY: "auto",
       background: "var(--bg-primary)",
       padding: "24px 24px 40px"
@@ -182,7 +180,7 @@ export default function SummaryCards() {
         </div>
 
         {/* Stat Cards */}
-        <div style={{
+        <div className="dashboard-stat-grid" style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           gap: "12px", marginBottom: "16px"
@@ -200,7 +198,7 @@ export default function SummaryCards() {
         </div>
 
         {/* Row 2 */}
-        <div style={{
+        <div className="dashboard-section-grid" style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "12px", marginBottom: "12px"
@@ -224,7 +222,7 @@ export default function SummaryCards() {
         </div>
 
         {/* Row 3 */}
-        <div style={{
+        <div className="dashboard-section-grid-3" style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
           gap: "12px"

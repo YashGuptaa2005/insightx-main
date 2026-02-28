@@ -28,7 +28,7 @@ function Message({ message }) {
           fontSize: "13px"
         }}>⚡</div>
       )}
-      <div  className="chat-bubble"
+      <div className="chat-bubble"
         style={{
         maxWidth: "72%",
         padding: "12px 16px",
@@ -106,10 +106,8 @@ function TypingIndicator() {
 }
 
 export default function ChatInterface({ messages, setMessages, sessionId }) {
-  // const [messages, setMessages] = useState([])
   const [input, setInput] = useState("")
   const [loading, setLoading] = useState(false)
-  // const [sessionId] = useState(() => Math.random().toString(36).slice(2))
   const bottomRef = useRef(null)
   const inputRef = useRef(null)
 
@@ -146,7 +144,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
     }}>
 
       {/* Messages area */}
-      <div style={{
+      <div className="chat-messages-area" style={{
         flex: 1, overflowY: "auto",
         padding: "24px 24px",
         display: "flex", flexDirection: "column",
@@ -186,7 +184,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
               </div>
 
               {/* Suggested questions */}
-              <div style={{
+              <div className="suggested-grid" style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
                 gap: "10px",
@@ -244,7 +242,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
       </div>
 
       {/* Input bar */}
-      <div style={{
+      <div className="chat-input-bar" style={{
         flexShrink: 0,
         padding: "12px 24px 20px",
         borderTop: "1px solid var(--border)",
@@ -254,7 +252,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
         flexDirection: "column",
         alignItems: "center"
       }}>
-        <div style={{ width: "100%", maxWidth: "900px", padding: "0 12px" }}>
+        <div className="chat-input-inner" style={{ width: "100%", maxWidth: "900px", padding: "0 12px" }}>
           <div style={{
             display: "flex", alignItems: "center", gap: "8px",
             background: "var(--bg-secondary)",
@@ -272,7 +270,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
                   sendMessage()
                 }
               }}
-              placeholder="Ask a leadership question about your UPI data..."
+              placeholder="Ask about your UPI data..."
               style={{
                 flex: 1,
                 background: "transparent",
@@ -281,7 +279,8 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
                 fontSize: "13px",
                 color: "var(--text-primary)",
                 fontFamily: "inherit",
-                padding: "4px 0"
+                padding: "4px 0",
+                minWidth: 0
               }}
             />
             <button
