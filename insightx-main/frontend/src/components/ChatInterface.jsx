@@ -123,7 +123,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
     setMessages(prev => [...prev, { role: "user", content: text }])
     setLoading(true)
     try {
-      const res = await axios.post("https://insightx-5j67.onrender.com/", {
+      const res = await axios.post("https://insightx-5j67.onrender.com/api/ask", {
         question: text,
         session_id: sessionId
       })
