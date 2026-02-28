@@ -60,3 +60,39 @@ body {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Reduce padding everywhere */
+  main {
+    padding: 0 !important;
+  }
+
+  /* Dashboard container spacing */
+  .mobile-padding {
+    padding: 16px !important;
+  }
+
+  /* Stack grids vertically */
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce card padding */
+  .card-compact {
+    padding: 16px !important;
+  }
+
+  /* Chat message bubble wider */
+  .chat-bubble {
+    max-width: 90% !important;
+  }
+
+  /* Input bar spacing */
+  .chat-input-container {
+    padding: 10px 12px 16px !important;
+  }
+}

@@ -28,7 +28,8 @@ function Message({ message }) {
           fontSize: "13px"
         }}>⚡</div>
       )}
-      <div style={{
+      <div  className="chat-bubble"
+        style={{
         maxWidth: "72%",
         padding: "12px 16px",
         borderRadius: isUser ? "16px 16px 4px 16px" : "16px 16px 16px 4px",
@@ -308,9 +309,10 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
             textAlign: "center", fontSize: "11px",
             color: "var(--text-dim)", marginTop: "10px",
             fontFamily: "'JetBrains Mono', monospace",
-            letterSpacing: "0.3px"
+            letterSpacing: "0.5px",
+            opacity: 0.8
           }}>
-            InsightX · 250,000 UPI transactions · Jan–Dec 2024
+            InsightX · <span style={{ color: "var(--accent)" }}>250K</span> Transactions · 2024
           </p>
         </div>
       </div>

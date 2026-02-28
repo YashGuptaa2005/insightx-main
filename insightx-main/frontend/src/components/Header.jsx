@@ -84,32 +84,32 @@ export default function Header({ activeTab, setActiveTab, onClearChat }) {
 
         {/* Clear chat button */}
         {activeTab === "chat" && (
-          <button
-            onClick={onClearChat}
-            onMouseEnter={e => {
-              e.currentTarget.style.borderColor = "var(--red)"
-              e.currentTarget.style.color = "var(--red)"
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.borderColor = "var(--border)"
-              e.currentTarget.style.color = "var(--text-secondary)"
-            }}
-            style={{
-              padding: "5px 12px",
-              borderRadius: "6px",
-              border: "1px solid var(--border)",
-              background: "transparent",
-              color: "var(--text-secondary)",
-              fontSize: "11px",
-              cursor: "pointer",
-              fontFamily: "'JetBrains Mono', monospace",
-              letterSpacing: "0.3px",
-              transition: "all 0.15s ease"
-            }}
-          >
-            Clear chat
-          </button>
-        )}
+  <button
+    onClick={onClearChat}
+    onMouseEnter={e => {
+      e.currentTarget.style.borderColor = "var(--red)"
+      e.currentTarget.style.color = "var(--red)"
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.borderColor = "var(--border)"
+      e.currentTarget.style.color = "var(--text-secondary)"
+    }}
+    style={{
+      padding: "5px 12px",
+      borderRadius: "6px",
+      border: "1px solid var(--border)",
+      background: "transparent",
+      color: "var(--text-secondary)",
+      fontSize: "11px",
+      cursor: "pointer",
+      fontFamily: "'JetBrains Mono', monospace",
+      letterSpacing: "0.3px",
+      transition: "all 0.15s ease"
+    }}
+  >
+    Clear chat
+  </button>
+)}
 
         {/* Live indicator */}
         <div style={{
