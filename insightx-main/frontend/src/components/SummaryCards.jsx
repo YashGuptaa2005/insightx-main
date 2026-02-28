@@ -110,9 +110,9 @@ export default function SummaryCards() {
     const fetchAll = async () => {
       try {
         const [s, f, t] = await Promise.all([
-          axios.get("https://insightx-5j67.onrender.com/api/summary"),
-          axios.get("https://insightx-5j67.onrender.com/api/data/failures"),
-          axios.get("https://insightx-5j67.onrender.com/api/data/trends")
+          axios.get("https://insightx-main.onrender.com/api/summary"),
+          axios.get("https://insightx-main.onrender.com/api/data/failures"),
+          axios.get("https://insightx-main.onrender.com/api/data/trends")
         ])
         setSummary(s.data)
         setFailures(f.data)
