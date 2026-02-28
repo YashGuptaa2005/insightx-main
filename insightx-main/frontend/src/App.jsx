@@ -31,7 +31,7 @@ export default function App() {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Header activeTab={activeTab} setActiveTab={setActiveTab} onClearChat={clearChat} />
       <main style={{ flex: 1, overflow: "hidden", position: "relative" }}>
         <div style={{

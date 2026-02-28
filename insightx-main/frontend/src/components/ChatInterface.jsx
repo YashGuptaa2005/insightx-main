@@ -187,7 +187,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
               {/* Suggested questions */}
               <div style={{
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr",
+                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
                 gap: "10px",
                 width: "100%"
               }}>
@@ -253,7 +253,7 @@ export default function ChatInterface({ messages, setMessages, sessionId }) {
         flexDirection: "column",
         alignItems: "center"
       }}>
-        <div style={{ width: "100%", maxWidth: "680px" }}>
+        <div style={{ width: "100%", maxWidth: "900px", padding: "0 12px" }}>
           <div style={{
             display: "flex", alignItems: "center", gap: "8px",
             background: "var(--bg-secondary)",

@@ -23,8 +23,8 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
   background-image: 
     linear-gradient(rgba(0,212,160,0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0,212,160,0.015) 1px, transparent 1px);

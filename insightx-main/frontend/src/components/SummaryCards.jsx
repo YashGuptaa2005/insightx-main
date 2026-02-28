@@ -184,7 +184,7 @@ export default function SummaryCards() {
         {/* Stat Cards */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           gap: "12px", marginBottom: "16px"
         }}>
           {loading ? (
@@ -202,7 +202,7 @@ export default function SummaryCards() {
         {/* Row 2 */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "12px", marginBottom: "12px"
         }}>
           {loading ? (
@@ -226,7 +226,7 @@ export default function SummaryCards() {
         {/* Row 3 */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
           gap: "12px"
         }}>
           {loading ? (
