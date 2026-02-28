@@ -65,7 +65,7 @@ Start the server:
 python3 main.py
 ```
 
-Backend runs at http://localhost:8000
+Backend runs at https://insightx-main.onrender.com
 
 ---
 
@@ -77,7 +77,7 @@ npm install
 npm run dev
 ```
 
-Frontend runs at http://localhost:5173
+Frontend runs at https://insightx-main.vercel.app/
 
 ---
 
